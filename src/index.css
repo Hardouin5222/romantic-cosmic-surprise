@@ -1,0 +1,43 @@
+:root {
+  color-scheme: dark;
+  --midnight: #020817;
+  --gold: #ffd700;
+  --gold-soft: #ffe8a3;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { width: 100%; height: 100%; margin: 0; overflow: hidden; background: var(--midnight); }
+body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+button { font-family: inherit; }
+
+.app-shell { position: fixed; inset: 0; overflow: hidden; background: radial-gradient(circle at 50% 40%, #0a1b3c 0%, #020817 58%, #000 100%); color: white; }
+.overlay-root { pointer-events: none; position: fixed; inset: 0; z-index: 10; }
+.cinema-gradient { position: absolute; inset: 0; background: radial-gradient(circle at 50% 45%, transparent 0%, rgba(2,8,23,.14) 42%, rgba(0,0,0,.72) 100%); }
+
+.start-screen { pointer-events: auto; position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; }
+.start-card { width: min(92vw, 430px); padding: 34px 28px; text-align: center; border: 1px solid rgba(255, 232, 163, .22); border-radius: 34px; background: linear-gradient(135deg, rgba(255,255,255,.1), rgba(255,255,255,.035)); backdrop-filter: blur(28px); box-shadow: 0 0 70px rgba(255,215,0,.14), inset 0 1px 0 rgba(255,255,255,.13); }
+.small-overline { color: rgba(255,232,163,.68); text-transform: uppercase; letter-spacing: .52em; font-size: 10px; font-weight: 700; }
+.start-card h1 { margin: 16px 0 0; font-family: Georgia, 'Times New Roman', serif; font-weight: 500; font-size: clamp(34px, 8vw, 54px); line-height: .95; color: #fff5cf; text-shadow: 0 0 24px rgba(255,215,0,.14); }
+.start-card p { margin: 22px auto 0; max-width: 310px; color: rgba(226,232,240,.74); line-height: 1.75; font-size: 14px; }
+.start-button { margin-top: 28px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: linear-gradient(135deg, #fff0ad, #d4a72c); color: #0f172a; padding: 14px 28px; font-weight: 800; letter-spacing: .03em; cursor: pointer; box-shadow: 0 0 45px rgba(255,215,0,.32); transition: transform .25s ease, filter .25s ease; }
+.start-button:hover { transform: translateY(-2px) scale(1.04); filter: brightness(1.08); }
+.music-note { display: block; margin-top: 14px; color: rgba(255,255,255,.36); font-size: 11px; }
+
+.hint-pill { position: absolute; top: 22px; left: 50%; transform: translateX(-50%); border: 1px solid rgba(255,232,163,.22); border-radius: 999px; padding: 10px 18px; background: rgba(255,255,255,.045); backdrop-filter: blur(18px); color: rgba(255,232,163,.76); font-size: 11px; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; white-space: nowrap; }
+.node-label { margin-top: 76px; transform: translateX(-50%); white-space: nowrap; border: 1px solid rgba(255,232,163,.24); border-radius: 999px; background: rgba(2,8,23,.38); backdrop-filter: blur(16px); padding: 8px 12px; color: rgba(255,245,207,.85); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-shadow: 0 0 20px rgba(255,215,0,.28); }
+
+.floating-words { position: absolute; inset: 0; overflow: hidden; }
+.floating-words span { position: absolute; color: rgba(255,232,163,.34); font-family: Georgia, 'Times New Roman', serif; font-size: clamp(12px, 2.3vw, 22px); text-shadow: 0 0 24px rgba(255,215,0,.12); white-space: nowrap; }
+
+.modal-backdrop { pointer-events: auto; position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: center; padding: 80px 16px 18px; background: rgba(0,0,0,.32); backdrop-filter: blur(3px); }
+.love-modal { width: min(94vw, 760px); max-height: min(78vh, 760px); overflow: auto; border-radius: 30px; border: 1px solid rgba(255,232,163,.23); background: linear-gradient(135deg, rgba(8,20,42,.78), rgba(3,9,22,.62)); backdrop-filter: blur(30px); box-shadow: 0 28px 90px rgba(0,0,0,.62), 0 0 75px rgba(255,215,0,.13), inset 0 1px 0 rgba(255,255,255,.12); padding: 26px; }
+.love-modal h2 { margin: 12px 0 20px; color: #fff2bf; font-family: Georgia, 'Times New Roman', serif; font-weight: 500; font-size: clamp(30px, 7vw, 50px); line-height: 1; }
+.poem-lines { color: rgba(241,245,249,.86); font-size: 15px; line-height: 1.95; }
+.poem-lines p { margin: 0 0 16px; }
+.close-button { margin-top: 10px; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; background: rgba(255,255,255,.08); color: #fff2bf; padding: 10px 18px; cursor: pointer; }
+
+@media (max-width: 640px) {
+  .modal-backdrop { padding: 70px 12px 14px; }
+  .love-modal { border-radius: 24px; padding: 20px; max-height: 80vh; }
+  .poem-lines { font-size: 14px; line-height: 1.85; }
+}
