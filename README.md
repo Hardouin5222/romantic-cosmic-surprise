@@ -1,16 +1,9 @@
-# Romantic Cosmic Surprise V4
+# Romantic Cosmic Surprise V5
 
 Vite + React + React Three Fiber + Drei + Postprocessing + Framer Motion + Howler.
 
-## Kurulum
-
-```bash
-npm install
-npm run dev
-```
-
 ## Yayınlama
-GitHub'a yükle, Vercel otomatik build eder.
+GitHub'a komple yükle, Vercel otomatik deploy eder.
 
 ## Müzik
-`public/music.mp3` dosyanı değiştir. Telif hakkına dikkat et.
+`public/music.mp3` dosyasını kendi müziğinle değiştir.
